@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/sales
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  security:
+    oauth2:
+      client:
+        registration:
+         github:
+          clientId: YOUR_GITHUB_APP_CLIENT_ID            
+          clientSecret: YOUR_GITHUB_APP_CLIENT_SECRET
+          scope:
+           - user:email
+           - read:user      
